@@ -1,4 +1,4 @@
-FROM golang:1.17.4 AS builder
+FROM golang:1.18.4 AS builder
 
 ARG TARGETPLATFORM
 
@@ -33,7 +33,7 @@ RUN set -x && \
 FROM debian:stable-20211011-slim AS litestream_downloader
 
 ARG TARGETPLATFORM
-ARG litestream_version="v0.3.8"
+ARG litestream_version="v0.3.9"
 
 WORKDIR /litestream
 
